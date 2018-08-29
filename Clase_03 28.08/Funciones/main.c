@@ -17,28 +17,31 @@ int main()
 
 int validarEdad(int edad, int max, int min)
 {
-    int edadValidada=0;
 
-    if(edad<=min && edad>=max)
+    int contador = 0;
+
+    while(edad>min || edad<max)
     {
-        edadValidada=1;
+        contador++;
+        if(contador == 3)
+        {
+            edad = -1;
+            break;
+        }
+        printf("Ingrese su edad nuevamente: ");
+        scanf("%d", &edad);
     }
 
-    return edadValidada;
+    return edad;
 }
 
 int pedirEdad(void)
 {
     int edad;
-    int edadValidada = 0;
 
-    do
-    {
-        printf("\nIngrese edad: ");
-        scanf("%d", &edad);
-        edadValidada=validarEdad(edad, 1, 100);
-
-    }while(edadValidada != 1);
+    printf("\nIngrese edad: ");
+    scanf("%d", &edad);
+    edad=validarEdad(edad, 1, 100);
 
     return edad;
 }
