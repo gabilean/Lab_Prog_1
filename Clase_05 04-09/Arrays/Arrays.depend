@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1536107843 source:/home/alumno/GLM/Arrays/main.c
+	<stdio.h>
+	<stdlib.h>
+	"myLibrary.c"
+
+1536108157 /home/alumno/GLM/Arrays/myLibrary.h
+
+1536108417 /home/alumno/GLM/Arrays/myLibrary.c
+	<stdio.h>
+	<stdlib.h>
+	"myLibrary.h"
+
