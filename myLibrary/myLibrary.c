@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "myLibrary.h"
+
 
 int retornarTotal(int notas[], int tamanio)
 {
@@ -121,6 +123,7 @@ int retornarCantidadPares(int notas[], int tamanio)
 int retornarCantidadEntreNotas(int notas[], int tamanio, int limInferior, int limSuperior)
 {
     int contador=0;
+    int i;
 
     for(i=0;i<tamanio;i++)
     {
@@ -131,4 +134,122 @@ int retornarCantidadEntreNotas(int notas[], int tamanio, int limInferior, int li
     }
 
     return contador;
+}
+
+int getInt(char mensaje[])
+{
+    int auxiliar;
+
+    printf("%s", mensaje);
+    scanf("%d", &auxiliar);
+
+    return auxiliar;
+}
+
+float getFloat(char mensaje[])
+{
+    float auxiliar;
+
+    printf("%s", mensaje);
+    scanf("%f", &auxiliar);
+
+    return auxiliar;
+}
+
+char getChar(char mensaje[])
+{
+    char auxiliar;
+
+    printf("%s", mensaje);
+    fflush(stdin);
+    scanf("%c", &auxiliar);
+
+    return auxiliar;
+}
+
+int esNumerico(char str[])
+{
+    int i;
+    int retorno = 1;
+
+    while(str[i] != '\0')
+    {
+        if(str[i] < '0' && str[i] > '9')
+        {
+            retorno = 0;
+        }
+        i++;
+    }
+
+    return retorno;
+}
+
+int esSoloLetras(char str[])
+{
+    int i;
+    int retorno = 1;
+
+    while(str[i] != '\0')
+    {
+        if(str[i] != ' ' && (str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' ||  str[i] > 'Z'))
+        {
+            retorno = 0;
+        }
+        i++;
+    }
+
+    return retorno;
+}
+
+int esAlfaNumerico(char str[])
+{
+    int i;
+    int retorno = 1;
+
+    while(str[i] != '\0')
+    {
+        if(str[i] != ' ' && (str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' ||  str[i] > 'Z') && (str[i] < '0' && str[i] > '9'))
+        {
+            retorno = 0;
+        }
+        i++;
+    }
+
+    return retorno;
+}
+
+void getString(char str[], char input[])
+{
+    printf(str);
+    scanf("%s", input);
+}
+
+int getStringLetras(char str[], char input[])
+{
+    char aux[4000];
+    int retorno = 0;
+    getString(str, aux);
+
+    if(esSoloLetras(aux))
+    {
+        strcpy(input, aux);
+        retorno = 1;
+    }
+
+    return retorno;
+}
+
+int getStringNumeros(char str[], char input[])
+{
+    char aux[4000];
+    int retorno = 0;
+    getString(str, aux);
+
+    if(esNumerico(aux))
+    {
+        input = aux;
+        retorno = 1;
+    }
+
+    return retorno;
 }

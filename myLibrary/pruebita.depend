@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1536691975 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\prubealibrary\pruebita\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"myLibrary.h"
+
+1536689949 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\mylibrary\mylibrary.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1536689136 c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\mylibrary\mylibrary.h
+
+1536689136 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\mylibrary\mylibrary.h
+
+1536689136 c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\prubealibrary\pruebita\mylibrary.h
+
+1536691910 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\prubealibrary\pruebita\mylibrary.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+
