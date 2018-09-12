@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536708418 source:/home/alumno/Descargas/Lab_Prog_1/Clase_07 11.09/EjemplosDeArray/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+
