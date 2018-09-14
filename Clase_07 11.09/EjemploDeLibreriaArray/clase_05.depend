@@ -67,10 +67,11 @@
 	<stdlib.h>
 	"utn.h"
 
-1536881579 source:/home/alumno/Descargas/Lab_Prog_1/Clase_07 11.09/EjemploDeLibreriaArray/main.c
+1536886622 source:/home/alumno/Descargas/Lab_Prog_1/Clase_07 11.09/EjemploDeLibreriaArray/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<ctype.h>
 	"utn.h"
 
 1536878379 /home/alumno/Descargas/Lab_Prog_1/Clase_07 11.09/EjemploDeLibreriaArray/utn.h
