@@ -1,10 +1,17 @@
-#include <stdio.h>
+#include <stdio_ext.h>
 #include <string.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include "myLibrary.h"
 
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
 
-int retornarTotal(int notas[], int tamanio)
+int myLibrary_sumaTotal(int notas[], int tamanio)
 {
     int acumulador=0;
     int i;
@@ -17,18 +24,32 @@ int retornarTotal(int notas[], int tamanio)
     return acumulador;
 }
 
-int retornarPromedio(int notas[], int tamanio)
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_Promedio(int notas[], int tamanio)
 {
     int suma=0;
     int promedio=0;
 
-    suma = retornarTotal(notas, tamanio);
+    suma = myLibrary_sumaTotal(notas, tamanio);
     promedio = suma/promedio;
 
     return promedio;
 }
 
-void cargarListado(int notas[], int tamanio)
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+void myLibrary_cargarListado(int notas[], int tamanio)
 {
     int i;
     int numeroIngresado;
@@ -41,67 +62,60 @@ void cargarListado(int notas[], int tamanio)
     }
 }
 
-void mostrarListado(int notas[], int tamanio)
-{
-    int i;
-
-    for(i=0;i<tamanio;i++)
-    {
-        printf("\nNotas guardadas: %d", notas[i]);
-    }
-}
-
-/*
-    mayor, menor, cantidad de pares, suma total, promedio
-
-    aprobado, desaprobado, rinde final (6 y 10)
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
 */
 
-
-void mostrarInformacionDelArray(int notas[], int tamanio)
+int myLibrary_numMaximo(int num[], int tamanio)
 {
-    printf("\nEl mayor es: %d", retornarMaximo(notas, tamanio));
-    printf("\nEl menor es: %d", retornarMinimo(notas, tamanio));
-    printf("\nEl suma es: %d", retornarPromedio(notas, tamanio));
-    printf("\nEl promedio es: %d", retornarTotal(notas, tamanio));
-    printf("\nCantidad de pares: %d", retornarCantidadPares(notas, tamanio));
-    //printf("\nDesaprobados: %d", retornarCantidadEntreNotas(notas, tamanio, 1, 3));
-    //printf("\nAprobados: %d", retornarCantidadEntreNotas(notas, tamanio, 4, 5));
-    //printf("\nA final: %d", retornarCantidadEntreNotas(notas, tamanio, 6, 10));
-}
-
-int retornarMaximo(int notas[], int tamanio)
-{
-    int max;
+    int max=0;
     int i;
 
     for(i=0;i<tamanio;i++)
     {
-        if(i==0 || notas[i] > max)
+        if(i==0 || num[i] > max)
         {
-            max = notas[i];
+            max = num[i];
         }
     }
 
     return max;
 }
 
-int retornarMinimo(int notas[], int tamanio)
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_numMinimo(int num[], int tamanio)
 {
     int min;
     int i;
 
     for(i=0;i<tamanio;i++)
     {
-        if(i==0 || notas[i] < min)
+        if(i==0 || num[i] < min)
         {
-            min = notas[i];
+            min = num[i];
         }
     }
 
     return min;
 }
-int retornarCantidadPares(int notas[], int tamanio)
+
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_CantidadPares(int num[], int tamanio)
 {
     int contadorPares=0;
     int par;
@@ -109,7 +123,7 @@ int retornarCantidadPares(int notas[], int tamanio)
 
     for(i=0; i<tamanio; i++)
     {
-        par = notas[i]%2;
+        par = num[i]%2;
 
         if(par == 0)
         {
@@ -120,14 +134,21 @@ int retornarCantidadPares(int notas[], int tamanio)
     return contadorPares;
 }
 
-int retornarCantidadEntreNotas(int notas[], int tamanio, int limInferior, int limSuperior)
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_CantidadEntreNotas(int num[], int tamanio, int limInferior, int limSuperior)
 {
     int contador=0;
     int i;
 
     for(i=0;i<tamanio;i++)
     {
-        if(notas[i]>=limInferior && notas[i]<=limSuperior)
+        if(num[i]>=limInferior && num[i]<=limSuperior)
         {
             contador++;
         }
@@ -136,7 +157,14 @@ int retornarCantidadEntreNotas(int notas[], int tamanio, int limInferior, int li
     return contador;
 }
 
-int getInt(char mensaje[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_getInt(char mensaje[])
 {
     int auxiliar;
 
@@ -146,7 +174,14 @@ int getInt(char mensaje[])
     return auxiliar;
 }
 
-float getFloat(char mensaje[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+float myLibrary_getFloat(char mensaje[])
 {
     float auxiliar;
 
@@ -156,7 +191,14 @@ float getFloat(char mensaje[])
     return auxiliar;
 }
 
-char getChar(char mensaje[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+char myLibrary_getChar(char mensaje[])
 {
     char auxiliar;
 
@@ -167,7 +209,14 @@ char getChar(char mensaje[])
     return auxiliar;
 }
 
-int esNumerico(char str[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_esNumerico(char str[])
 {
     int i;
     int retorno = 1;
@@ -184,7 +233,14 @@ int esNumerico(char str[])
     return retorno;
 }
 
-int esSoloLetras(char str[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_esSoloLetras(char str[])
 {
     int i;
     int retorno = 1;
@@ -201,7 +257,14 @@ int esSoloLetras(char str[])
     return retorno;
 }
 
-int esAlfaNumerico(char str[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_esAlfaNumerico(char str[])
 {
     int i;
     int retorno = 1;
@@ -218,19 +281,50 @@ int esAlfaNumerico(char str[])
     return retorno;
 }
 
-void getString(char str[], char input[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_getString(char* pBuffer, int limite)
 {
-    printf(str);
-    scanf("%s", input);
+    int retorno = -1;
+    int len;
+    char bufferStr[4096];
+
+    if(pBuffer != NULL && limite > 0)
+    {
+        __fpurge(stdin);
+        fgets(bufferStr, limite, stdin);
+        len = strlen(bufferStr);
+        if(len != limite-1 || bufferStr[limite-2] == '\n')
+        {
+            bufferStr[len-1] = '\0';
+        }
+
+        strncpy(pBuffer, bufferStr, limite);
+        retorno = 0;
+    }
+
+    return retorno;
 }
 
-int getStringLetras(char str[], char input[])
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_getStringLetras(char str[], char input[])
 {
     char aux[4000];
     int retorno = 0;
-    getString(str, aux);
+    myLibrary_getString(str, aux);
 
-    if(esSoloLetras(aux))
+    if(myLibrary_esSoloLetras(aux))
     {
         strcpy(input, aux);
         retorno = 1;
@@ -239,17 +333,93 @@ int getStringLetras(char str[], char input[])
     return retorno;
 }
 
-int getStringNumeros(char str[], char input[])
-{
-    char aux[4000];
-    int retorno = 0;
-    getString(str, aux);
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
 
-    if(esNumerico(aux))
+int myLibrary_getStringNumeros(char* str, int limite, char* msg)
+{
+    int retorno = 0;
+    printf("%s", msg);
+    myLibrary_getString(str, limite);
+
+    if(myLibrary_esNumerico(str))
     {
-        input = aux;
         retorno = 1;
     }
 
     return retorno;
 }
+
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_isValidLetras(char* pBuffer, int limite)
+{
+    int retorno = 0;
+    int i;
+
+    if(pBuffer != NULL && limite > 0)
+    {
+        retorno = 1;
+        for(i=0; i < limite && pBuffer[i] != '\0'; i++)
+        {
+            if(tolower(pBuffer[i]) < 'a' || tolower(pBuffer[i]) > 'z')
+            {
+                retorno = 0;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
+
+/**
+    utn_getNombre :
+    @param
+    @param
+    @return
+*/
+
+int myLibrary_getNombre(char* pNombre,int limite, char* msg, char* msgErr, int reintentos)
+{
+    int retorno=-1;
+    char bufferNombre[4096];
+
+    if(pNombre != NULL && msg != NULL && msgErr != NULL && limite > 0 && reintentos >= 0)
+    {
+        do
+        {
+            reintentos--;
+            printf("%s", msg);
+            if(myLibrary_getString(bufferNombre,limite)==0 && myLibrary_isValidLetras(bufferNombre, limite))
+            {
+                strncpy(pNombre, bufferNombre, limite);
+                retorno = 0;
+                break;
+            }
+            else
+            {
+                printf("%s", msgErr);
+            }
+        }while(reintentos >= 0);
+    }
+    return retorno;
+}
+
+/*void myLibrary_mostrarEmpleados(struct eEmpleado datos, int limite)
+{
+    int i;
+
+    for(i=0; i<limite; i++)
+    {
+        printf("Dato: %s - %s - %s\n", datos->nombre, datos->apellido, datos->edad);
+    }
+}*/

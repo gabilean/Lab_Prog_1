@@ -5,6 +5,8 @@
 	<string.h>
 	"myLibrary.h"
 
+1536691910 .h"
+
 1536689949 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\mylibrary\mylibrary.c
 	<stdio.h>
 	<string.h>
@@ -20,6 +22,21 @@
 1536691910 source:c:\users\gabriel.mendoza\downloads\lab_prog_1-master\lab_prog_1-master\prubealibrary\pruebita\mylibrary.c
 	<stdio.h>
 	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1537141086 source:/home/gabilean/UTN2/Lab_Prog_1/myLibrary/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"myLibrary.h"
+
+1537140972 /home/gabilean/UTN2/Lab_Prog_1/myLibrary/myLibrary.h
+
+1537140972 source:/home/gabilean/UTN2/Lab_Prog_1/myLibrary/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
 	<stdlib.h>
 	"myLibrary.h"
 

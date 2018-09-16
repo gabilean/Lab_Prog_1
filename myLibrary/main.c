@@ -3,20 +3,27 @@
 #include <string.h>
 #include "myLibrary.h"
 
+typedef struct
+{
+    char nombre[3];
+    char apellido[3];
+    char edad[3];
+
+}eEmpleado;
+
 int main()
 {
-    char auxNombre[100];
-    char nombre[100] = {};
+    eEmpleado empleado;
+    int i;
 
-    if(!getStringLetras("Ingrese un nombre: ", auxNombre))
-    {
-        printf("Ingrese solo letras!\n");
-    }
-    else
-    {
-        strcpy(nombre, auxNombre);
-        printf("Nombre: %s", nombre);
-    }
+    myLibrary_getNombre(empleado.nombre, 4, "\nIngrese un nombre: ", "Ingrese solo letras!\n", 3);
+    myLibrary_getNombre(empleado.apellido, 4, "\nIngrese un apellido: ", "Ingrese solo letras!\n", 3);
+    myLibrary_getStringNumeros(empleado.edad, 4, "\nIngrese edad: ");
 
+    for(i=0; i<1; i++)
+    {
+        printf("Datos: %s - %s - %s", empleado.nombre, empleado.apellido, empleado.edad);
+    }
+    //myLibrary_mostrarEmpleados(empleado, 1);
     return 0;
 }
