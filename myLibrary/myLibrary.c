@@ -219,11 +219,11 @@ char myLibrary_getChar(char mensaje[])
 int myLibrary_esNumerico(char str[])
 {
     int i;
-    int retorno = 1;
+    int retorno = -1;
 
     while(str[i] != '\0')
     {
-        if(str[i] < '0' && str[i] > '9')
+        if(str[i] < '0' || str[i] > '9')
         {
             retorno = 0;
         }
@@ -296,8 +296,8 @@ int myLibrary_getString(char* pBuffer, int limite)
 
     if(pBuffer != NULL && limite > 0)
     {
-        __fpurge(stdin);
         fgets(bufferStr, limite, stdin);
+        __fpurge(stdin);
         len = strlen(bufferStr);
         if(len != limite-1 || bufferStr[limite-2] == '\n')
         {
@@ -340,17 +340,30 @@ int myLibrary_getStringLetras(char str[], char input[])
     @return
 */
 
-int myLibrary_getStringNumeros(char* str, int limite, char* msg)
+int myLibrary_getStringNumeros(char* str, int limite, char* msg, char* msgErr, int reintentos)
 {
-    int retorno = 0;
-    printf("%s", msg);
-    myLibrary_getString(str, limite);
+    int retorno=-1;
+    char bufferNumero[4096];
 
-    if(myLibrary_esNumerico(str))
+    if(str != NULL && msg != NULL && msgErr != NULL && limite > 0 && reintentos >= 0)
     {
-        retorno = 1;
-    }
+        do
+        {
+            reintentos--;
+            printf("%s", msg);
+            if(myLibrary_getString(bufferNumero,limite)==0 && myLibrary_esNumerico(bufferNumero))
+            {
 
+                strncpy(str, bufferNumero, limite);
+                retorno = 0;
+                break;
+            }
+            else
+            {
+                printf("%s", msgErr);
+            }
+        }while(reintentos >= 0);
+    }
     return retorno;
 }
 

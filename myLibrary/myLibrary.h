@@ -17,10 +17,10 @@ int myLibrary_esSoloLetras(char str[]);
 int myLibrary_esAlfaNumerico(char str[]);
 int myLibrary_getString(char*, int);
 int myLibrary_getStringLetras(char str[], char input[]);
-int myLibrary_getStringNumeros(char*, int, char*);
+int myLibrary_getStringNumeros(char*, int, char*, char*, int);
 int myLibrary_isValidLetras(char*, int);
 int myLibrary_getNombre(char* ,int , char*, char*, int);
-void myLibrary_mostrarEmpleado(struct datos, int);
+//void myLibrary_mostrarEmpleado(struct datos, int);
 
 
 
