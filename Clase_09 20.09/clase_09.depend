@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1537316028 source:/home/alumno/Entregas/clase_09_init/utn.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"utn.h"
+
+1537315942 /home/alumno/Entregas/clase_09_init/utn.h
+
+1537319311 source:/home/alumno/Entregas/clase_09_init/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"producto.h"
+
+1537317631 /home/alumno/Entregas/clase_09_init/producto.h
+
+1537319250 source:/home/alumno/Entregas/clase_09_init/producto.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"utn.h"
+	"producto.h"
+
+1537483868 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"producto.h"
+
+1537315942 /home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/utn.h
+
+1537480773 /home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
+
+1537483504 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"utn.h"
+	"producto.h"
+
+1537316028 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/utn.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"utn.h"
+
+1537480773 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
+
+1537315942 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/utn.h
+
