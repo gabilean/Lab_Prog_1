@@ -5,6 +5,8 @@
 #include "utn.h"
 #include "producto.h"
 
+static int getNextId();
+
 int producto_init(sproducto array[],int len,int valor)
 {
     int i;
@@ -101,18 +103,12 @@ int producto_lugarLibre(sproducto array[],int limite,char* msje, char* msjErr)
   return retorno;
 }
 
-
-void mostrarEdad(int edad){
-    printf("\n mi edad es: %d",edad);
-
-}
-
-/*static int getNextId()
+static int getNextId()
 {
     static int ultimoId = -1;
     ultimoId++;
     return ultimoId;
-}*/
+}
 
 
 /*int producto_mostrarMenu(char* msje, char* msjErr, sproducto array[])

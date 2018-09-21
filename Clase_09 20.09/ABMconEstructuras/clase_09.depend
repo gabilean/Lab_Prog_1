@@ -25,7 +25,7 @@
 	"utn.h"
 	"producto.h"
 
-1537483868 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/main.c
+1537487757 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/main.c
 	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
@@ -34,9 +34,9 @@
 
 1537315942 /home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/utn.h
 
-1537480773 /home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
+1537487831 /home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
 
-1537483504 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.c
+1537487925 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.c
 	<stdio_ext.h>
 	<string.h>
 	<stdlib.h>
@@ -51,7 +51,7 @@
 	<ctype.h>
 	"utn.h"
 
-1537480773 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
+1537487831 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/producto.h
 
 1537315942 source:/home/alumno/Descargas/Lab_Prog_1/Clase_09 20.09/utn.h
 
