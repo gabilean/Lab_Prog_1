@@ -1,0 +1,259 @@
+# depslib dependency file v1.0
+1524699666 source:d:\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525298482 h"
+
+1524691839 source:d:\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691840 
+
+1524691839 d:\template\utn.h
+
+1524700062 source:d:\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524700062 d:\template\fantasma.h
+
+1524705693 source:d:\template_2\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1524700062 d:\template_2\fantasma.h
+
+1524691839 d:\template_2\utn.h
+
+1524691839 source:d:\template_2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524704878 source:d:\template_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1524705120 d:\template_2\pantalla.h
+
+1524791004 source:d:\labo1\clase11\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1524791015 d:\labo1\clase11\contratacion.h
+	"pantalla.h"
+
+1524791070 d:\labo1\clase11\pantalla.h
+
+1524691840 d:\labo1\clase11\utn.h
+
+1524791042 source:d:\labo1\clase11\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+
+1524791042 ion.h"
+
+1524791107 source:d:\labo1\clase11\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1524691840 source:d:\labo1\clase11\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525304688 source:d:\clase12\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1525304647 d:\clase12\contratacion.h
+	"pantalla.h"
+
+1525298482 d:\clase12\pantalla.h
+
+1524691840 d:\clase12\utn.h
+
+1524691840 source:d:\clase12\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525306311 source:d:\clase12\informar.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1525305115 source:d:\clase12\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+	"informar.h"
+
+1525298482 source:d:\clase12\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1525305074 d:\clase12\informar.h
+
+1538516416 source:/home/alumno/Entregas/CLASE_13/Contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1538516416 /home/alumno/Entregas/CLASE_13/Contratacion.h
+	"pantalla.h"
+
+1538516416 /home/alumno/Entregas/CLASE_13/pantalla.h
+
+1538516416 /home/alumno/Entregas/CLASE_13/utn.h
+
+1538516416 source:/home/alumno/Entregas/CLASE_13/informar.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1538516416 source:/home/alumno/Entregas/CLASE_13/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+	"informar.h"
+
+1538516416 /home/alumno/Entregas/CLASE_13/informar.h
+
+1538516416 source:/home/alumno/Entregas/CLASE_13/pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1538516416 source:/home/alumno/Entregas/CLASE_13/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1538516416 source:/home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/Contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1538526560 /home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/Contratacion.h
+	"pantalla.h"
+
+1538516416 /home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/pantalla.h
+
+1538516416 /home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/utn.h
+
+1538527264 source:/home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/informar.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1538525532 source:/home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+	"informar.h"
+
+1538525533 /home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/informar.h
+
+1538519498 source:/home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1538516416 source:/home/alumno/Descargas/Lab_Prog_1/Clase_13 02.10/practicaParcialInformes/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
