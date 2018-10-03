@@ -158,6 +158,10 @@ int informar_lessThanAverage(Pantalla* array, int limite)
     return retorno;
 }
 
+//GENERAR LISTA SIN REPETIDOS VIRTUALMENTE
+//Nos paramos en CUIT, consultar en las contrattaciones que pantallas tiene asociadas
+//Recorrer con el cliente para ver que contrataciones tiene para obtener el id de pantalla con la funcion getID
+
 static int addCuit(Contrataciones* arrayC, char* cuit, int limite)
 {
     int i;
