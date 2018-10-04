@@ -45,3 +45,49 @@
 	"publicacion.h"
 	"cliente.h"
 
+1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/avisoDiario.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"publicacion.h"
+	"myLibrary.h"
+	"informes.h"
+
+1538675967 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/cliente.h
+
+1538675566 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/publicacion.h
+	"cliente.h"
+
+1538675566 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/myLibrary.h
+
+1538675566 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/informes.h
+
+1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/informes.c
+
+1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/publicacion.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"publicacion.h"
+	"cliente.h"
+
+1538675976 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"myLibrary.h"
+

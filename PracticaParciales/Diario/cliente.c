@@ -115,7 +115,7 @@ int cliente_getIDClient(Cliente* list, int len, int id)
 
 */
 
-/*Cliente* cliente_getClienteById(Cliente* pBuffer,int limite, int id)
+Cliente* cliente_getClienteById(Cliente* pBuffer,int limite, int id)
 {
     Cliente* retorno = NULL;
     int i;
@@ -127,26 +127,6 @@ int cliente_getIDClient(Cliente* list, int len, int id)
             if(pBuffer[i].isEmpty == 0 && pBuffer[i].id == id)
             {
                 retorno = &pBuffer[i]; //pBuffer+i
-                printf("%s", )
-                break;
-            }
-        }
-    }
-    return retorno;
-}*/
-
-int cliente_getClienteById(Cliente* pBuffer,int limite, int id)
-{
-    Cliente* retorno = NULL;
-    int i;
-
-    if(pBuffer != NULL && limite >= 0 && id != NULL)
-    {
-        for(i=0;i<limite;i++)
-        {
-            if(pBuffer[i].isEmpty == 0 && pBuffer[i].id == id)
-            {
-                retorno = i; //pBuffer+i
                 break;
             }
         }

@@ -199,18 +199,13 @@ int publicacion_pausePublicacion(Publicacion* list, Cliente* listCliente, int li
     int retorno = -1;
     int idCliente;
     int i;
-    //Cliente* auxCliente = NULL;
-    int auxCliente;
+    Cliente* auxCliente = NULL;
 
     idCliente = publicacion_getIDClientePublicacion(list, limite, idPublicacion);
 
-    printf("\nidCliente: %d", idCliente);
-
     auxCliente = cliente_getClienteById(listCliente, limite, idCliente);
 
-    printf("idCliente2: %d", auxCliente);
-
-    //printf("\nNombre: %s - Apellido: %s - Cuit: %s", auxCliente->name, auxCliente->lastName, auxCliente->cuit);
+    printf("\nNombre: %s - Apellido: %s - Cuit: %s", auxCliente->name, auxCliente->lastName, auxCliente->cuit);
 
     retorno = 0;
 
