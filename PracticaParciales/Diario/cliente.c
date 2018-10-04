@@ -120,12 +120,16 @@ Cliente* cliente_getClienteById(Cliente* pBuffer,int limite, int id)
     Cliente* retorno = NULL;
     int i;
 
-    if(pBuffer != NULL && limite >= 0 && id != NULL)
+    if(pBuffer != NULL && limite >= 0)
     {
+        printf("\nIFFFF!!!");
         for(i=0;i<limite;i++)
         {
+            printf("\nFOR!!!");
             if(pBuffer[i].isEmpty == 0 && pBuffer[i].id == id)
             {
+                printf("\npBuffer ID: %d", pBuffer[i].id);
+                printf("\nisEmpty: %d", pBuffer[i].isEmpty);
                 retorno = &pBuffer[i]; //pBuffer+i
                 break;
             }

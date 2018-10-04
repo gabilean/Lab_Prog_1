@@ -76,7 +76,7 @@
 	<stdlib.h>
 	"myLibrary.h"
 
-1538675566 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/publicacion.c
+1538676176 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/publicacion.c
 	<stdio_ext.h>
 	<string.h>
 	<stdlib.h>
@@ -84,7 +84,7 @@
 	"publicacion.h"
 	"cliente.h"
 
-1538675976 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/cliente.c
+1538677639 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/PracticaParciales/Diario/cliente.c
 	<stdio_ext.h>
 	<string.h>
 	<stdlib.h>
