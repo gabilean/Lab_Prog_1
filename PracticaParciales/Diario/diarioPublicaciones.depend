@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1538622534 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/avisoDiario.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"publicacion.h"
+	"myLibrary.h"
+	"informes.h"
+
+1538624397 /home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/cliente.h
+
+1538620871 /home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/publicacion.h
+	"cliente.h"
+
+1538598890 /home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/myLibrary.h
+
+1538596820 /home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/informes.h
+
+1538624397 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"myLibrary.h"
+
+1538596540 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/informes.c
+
+1538600853 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1538600861 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1538623678 source:/home/gabilean/UTN2/Lab_Prog_1/PracticaParciales/Diario/publicacion.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"publicacion.h"
+	"cliente.h"
+

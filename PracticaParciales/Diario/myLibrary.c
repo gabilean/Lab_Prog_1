@@ -6,6 +6,7 @@
 
 static int getFloat(float* num);
 static int getInt(int* num);
+static int getCuit(char* cuit);
 
 /**
     utn_getNombre :
@@ -263,9 +264,14 @@ int myLibrary_esAlfaNumerico(char* str)
     {
         if(str[i] != ' ' && (str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' ||  str[i] > 'Z') && (str[i] < '0' && str[i] > '9'))
         {
-            retorno = 0;
+            break;
         }
         i++;
+
+        if(str[i] == '\0')
+        {
+            retorno = 0;
+        }
     }
 
     return retorno;
@@ -318,8 +324,8 @@ static int getFloat(float* num)
     return retorno;
 }
 
-/** \brief Obtiene un string y verifica si es float
- * \param float num*
+/** \brief Obtiene un string y verifica si es int
+ * \param int num*
  * \return int return (-1) es error [Largo invalido o puntero nulo] - (0) OK
  */
 
@@ -331,6 +337,25 @@ static int getInt(int* num)
     if(myLibrary_getString(bufferStr, 100) == 0 && myLibrary_esInt(bufferStr) == 0)
     {
         *num = atoi(bufferStr);
+        retorno = 0;
+    }
+
+    return retorno;
+}
+
+/** \brief Obtiene un string y verifica si es cuit
+ * \param char cuit*
+ * \return int return (-1) es error [Largo invalido o puntero nulo] - (0) OK
+ */
+
+static int getCuit(char* cuit)
+{
+    char bufferStr[4000];
+    int retorno = -1;
+
+    if(myLibrary_getString(bufferStr, 4000) == 0 && myLibrary_esAlfaNumerico(bufferStr) == 0)
+    {
+        strcpy(cuit, bufferStr);
         retorno = 0;
     }
 
@@ -459,6 +484,33 @@ int myLibrary_getNombre(char* pNombre,int limite, char* msg, char* msgErr, int r
             if(myLibrary_getString(bufferNombre,limite) == 0 && myLibrary_isValidLetras(bufferNombre, limite) == 0)
             {
                 strncpy(pNombre, bufferNombre, limite);
+                retorno = 0;
+                break;
+            }
+            else
+            {
+                printf("%s", msgErr);
+            }
+        }while(reintentos >= 0);
+    }
+    return retorno;
+}
+
+int myLibrary_getCuit(char* cuit, int limite, char* msg, char* msgErr, int reintentos)
+{
+    int retorno=-1;
+    char bufferCuit[5000];
+
+    if(cuit != NULL && msg != NULL && msgErr != NULL && limite > 0 && reintentos >= 0)
+    {
+        do
+        {
+            __fpurge(stdin);
+            reintentos--;
+            printf("%s", msg);
+            if(getCuit(bufferCuit) == 0)
+            {
+                strcpy(cuit, bufferCuit);
                 retorno = 0;
                 break;
             }

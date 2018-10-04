@@ -20,6 +20,7 @@ int myLibrary_isValidLetras(char* pBuffer, int limite);
 int myLibrary_getNombre(char* pNombre,int limite, char* msg, char* msgErr, int reintentos);
 int myLibrary_getInt(int* num, int limite, char* msg, char* msgErr, int reintentos);
 int myLibrary_getFloat(float* num, int limite, char* msg, char* msgErr, int reintentos);
+int myLibrary_getCuit(char* cuit, int limite, char* msg, char* msgErr, int reintentos);
 
 //void myLibrary_mostrarEmpleado(struct datos, int);
 
