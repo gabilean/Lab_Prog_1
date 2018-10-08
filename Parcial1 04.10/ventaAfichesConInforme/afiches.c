@@ -189,7 +189,7 @@ int afiches_altaAfiche(Afiche* list, int indice, int id)
         myLibrary_getInt(&list[indice].cantidad, 20, "\nIngrese su cantidad: ", "\nIngrese solo numeros", 2);
         list[indice].idCliente = id;
         list[indice].id = afiches_assignID();
-        list[indice].isEmpty = FALSE;
+        list[indice].isEmpty = COBRAR;
         printf("\n\nNumero de ID generado para esta publicacion: %d", list[indice].id);
         retorno = 0;
     }
@@ -197,13 +197,14 @@ int afiches_altaAfiche(Afiche* list, int indice, int id)
     {
         printf("\nNo queda más espacio para guardar clientes!!");
     }
-
     return retorno;
-
 }
 
 /**
-
+* \brief modifica la informacion de un afiche
+* \param list Afiche*
+* \param int indice
+* \return int return -1 si no se modifico - 0 si se cargo correctamente
 */
 
 int afiches_modifyAfiche(Afiche* list, int indice)
@@ -242,7 +243,11 @@ int afiches_modifyAfiche(Afiche* list, int indice)
 }
 
 /**
-
+* \brief elimina un afiche del la lista
+* \param int Afiche*
+* \param int limite
+* \param int idCliente
+* \return int return -1 si no se elimino el afiche - 0 afiche eliminado
 */
 
 int afiches_removeAfiche(Afiche* list, int limite, int idCliente)
@@ -268,8 +273,12 @@ int afiches_removeAfiche(Afiche* list, int limite, int idCliente)
 
     return retorno;
 }
-/**
 
+/**
+* \brief cambia el estado del afiche a cobrado
+* \param list Afiche*
+* \param int indice
+* \return int return -1 estado no cambiado - 0 estado cambiado
 */
 
 int afiches_cashAfiche(Afiche* list, int indice)
@@ -303,30 +312,8 @@ int afiches_cashAfiche(Afiche* list, int indice)
     return retorno;
 }
 
-/**
-
-*/
-
-int afiches_pauseAfiche(Afiche* list, Cliente* listCliente, int limite, int idAfiche)
-{
-    int retorno = -1;
-    int idCliente;
-
-    Cliente* auxCliente = NULL;
-
-    idCliente = afiches_getIDClienteAfiche(list, limite, idAfiche);
-
-    auxCliente = cliente_getClienteById(listCliente, limite, idCliente);
-
-    printf("\nNombre: %s - Apellido: %s - Cuit: %s", auxCliente->name, auxCliente->lastName, auxCliente->cuit);
-
-    retorno = 0;
-
-    return retorno;
-}
-
 /** \brief Imprime el array de afiches de forma encolumnada
- * \param list Employee*
+ * \param list Afiche*
  * \param len int
  * \return int return (-1) es error [Largo invalido o puntero nulo] - (0) OK
  */
@@ -338,13 +325,13 @@ int afiches_printAfiche(Afiche* list, int len)
 
     if(list != NULL && len >= 0)
     {
-        printf("\n\nListado de ventas a cobrar\n\n");
+        printf("\n\nListado de ventas\n\n");
 
         for(i=0; i<len; i++)
         {
-            if(list[i].isEmpty == FALSE)
+            if(list[i].isEmpty == COBRAR || list[i].isEmpty == COBRADO)
             {
-                printf("ID: %d - IDCliente: %d - Archivo: %s - Zona: %s\n", list[i].id, list[i].idCliente, list[i].nombreArchivo, list[i].zona);
+                printf("ID: %d - IDCliente: %d - Archivo: %s - Zona: %s - Cantidad: %d - isEmpty: %d\n", list[i].id, list[i].idCliente, list[i].nombreArchivo, list[i].zona, list[i].cantidad, list[i].isEmpty);
             }
         }
 
@@ -352,8 +339,12 @@ int afiches_printAfiche(Afiche* list, int len)
     }
     return retorno;
 }
-/**
 
+/**
+* \brief Imprime el array de afiches cobrados de forma encolumnada
+* \param list Afiche*
+* \param int len
+* \return int return -1 si el array de afiches es NULL - 0 muestra correcta
 */
 
 int afiches_printCobradosAfiches(Afiche* list, int len)
@@ -369,7 +360,7 @@ int afiches_printCobradosAfiches(Afiche* list, int len)
         {
             if(list[i].isEmpty == COBRADO)
             {
-                printf("ID: %d - IDCliente: %d - Archivo: %s - Zona: %s\n", list[i].id, list[i].idCliente, list[i].nombreArchivo, list[i].zona);
+                printf("ID: %d - IDCliente: %d - Archivo: %s - Zona: %s - isEmpty: %d\n", list[i].id, list[i].idCliente, list[i].nombreArchivo, list[i].zona, list[i].isEmpty);
             }
         }
 
@@ -380,7 +371,10 @@ int afiches_printCobradosAfiches(Afiche* list, int len)
 }
 
 /**
-
+* \brief muestra Afiches de un cliente en particular
+* \param list Afiche*
+* \param int limite
+* \return -1 si el array es NULL - 0 muestra correcta
 */
 
 int afiches_printAficheConClientes(Afiche* list, int limite, int idCliente)
@@ -390,23 +384,86 @@ int afiches_printAficheConClientes(Afiche* list, int limite, int idCliente)
 
     printf("\nVentas del cliente ingresado\n");
 
-    for(i=0; i<limite; i++)
+    if(list != NULL && limite >= 0)
     {
-        if(idCliente == list[i].idCliente)
+        for(i=0; i<limite; i++)
         {
-            if(list[i].isEmpty == FALSE)
+            if(idCliente == list[i].idCliente)
             {
-                printf("ID Cliente: %d - Archivo: %s - Zona: %s - Cantidad: %d\n", list[i].idCliente, list[i].nombreArchivo, list[i].zona, list[i].cantidad);
+                if(list[i].isEmpty == COBRAR)
+                {
+                    printf("ID Cliente: %d - Archivo: %s - Zona: %s - Cantidad: %d\n", list[i].idCliente, list[i].nombreArchivo, list[i].zona, list[i].cantidad);
+                }
             }
         }
+        retorno = 0;
     }
-
     return retorno;
 }
 
 /**
 
 
+*/
+
+int afiches_printClientesACobrar(Cliente* listCliente, Afiche* listAfiche, int len)
+{
+    int retorno = -1;
+    int i;
+    int aCobrar;
+
+    if(listCliente != NULL && len >= 0)
+    {
+        printf("\n\nListado de clientes con ventas a cobrar\n\n");
+
+        for(i=0; i<len; i++)
+        {
+            aCobrar = afiches_cantidadAfichesACobrar(listAfiche, len, listCliente[i].id);
+
+            if(aCobrar > 0)
+            {
+                printf("ID: %d - Nombre: %s - Apellido: %s - Cuit: %s - A cobrar: %d\n", listCliente[i].id, listCliente[i].name, listCliente[i].lastName, listCliente[i].cuit, aCobrar);
+            }
+        }
+
+        retorno = 0;
+    }
+    return retorno;
+}
+
+/**
+
+*/
+
+int afiches_cantidadAfichesACobrar(Afiche* list, int limite, int idCliente)
+{
+    int i;
+    int contador = 0;
+
+    if(list != NULL && limite>=0)
+    {
+        for(i=0; i<limite; i++)
+        {
+            if(list[i].isEmpty == COBRAR && list[i].idCliente == idCliente)
+            {
+                contador++;
+            }
+        }
+    }
+    return contador;
+}
+
+/**
+* \brief carga el array de afiches forzadamente
+* \param listAfiches Afiche*
+* \param int limite
+* \param listClientes Cliente*
+* \param int lenClientes
+* \param int idCliente
+* \param char zona*
+* \param char archivo*
+* \param int cantidad
+* \return -1 si el array es NULL - 0 carga correcta
 */
 
 int afiches_altaForzada(Afiche* listAfiches,int limite, Cliente* listClientes, int lenClientes, int idCliente, char* zona, char* archivo, int cantidad)
@@ -426,7 +483,7 @@ int afiches_altaForzada(Afiche* listAfiches,int limite, Cliente* listClientes, i
                 strcpy(listAfiches[i].nombreArchivo,archivo);
                 listAfiches[i].cantidad = cantidad;
                 listAfiches[i].idCliente = idCliente;
-                listAfiches[i].isEmpty= FALSE;
+                listAfiches[i].isEmpty= COBRAR;
                 listAfiches[i].id = afiches_assignID();
             }
         }

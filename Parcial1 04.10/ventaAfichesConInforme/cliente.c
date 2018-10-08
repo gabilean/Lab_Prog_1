@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "cliente.h"
+#include "afiches.h"
 #include "myLibrary.h"
 
 #define TRUE 1

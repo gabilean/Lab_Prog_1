@@ -1,6 +1,8 @@
 #ifndef CLIENTE_H_INCLUDED
 #define CLIENTE_H_INCLUDED
 
+//#include "afiches.h"
+
 typedef struct
 {
     int id;
@@ -23,6 +25,5 @@ int cliente_altaForzada(Cliente* array, int limite, char* nombre, char* apellido
 int cliente_modifyCliente(Cliente* list, int indice);
 int cliente_removeCliente(Cliente* list, int indice);
 int cliente_printClientes(Cliente* list, int len);
-
 
 #endif // CLIENTE_H_INCLUDED

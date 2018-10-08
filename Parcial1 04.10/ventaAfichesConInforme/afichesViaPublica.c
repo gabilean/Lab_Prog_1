@@ -4,8 +4,9 @@
 #include "cliente.h"
 #include "afiches.h"
 #include "myLibrary.h"
-#define CLIENTES 100
-#define VENTAS 1000
+#include "informes.h"
+#define CLIENTES 4
+#define VENTAS 4
 
 /** \brief  Muestra menú ABM de clientes y ventas
  * \param void
@@ -24,12 +25,17 @@ void afichesViaPublica_menu(void)
     int opcion = 0;
     int idCliente;
     int idVenta;
+    int menos10;
 
-    cliente_altaForzada(arrayClientes, CLIENTES, "Gabriel", "Mendoza", "23-39097091-9");
-    cliente_altaForzada(arrayClientes, CLIENTES, "Cristian", "Mendoza", "23-30356894-9");
+    cliente_altaForzada(arrayClientes, CLIENTES, "Gabriel", "Mendoza", "24");
+    cliente_altaForzada(arrayClientes, CLIENTES, "Cristian", "Mendoza", "24");
+    cliente_altaForzada(arrayClientes, CLIENTES, "Susana", "Perez", "50");
+    cliente_altaForzada(arrayClientes, CLIENTES, "Maria", "Schell", "2");
 
     afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"CABA","archivoMuestra1", 2);
-    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"ZonaSur","archivoMuestra2", 2);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"ZonaSur","archivoMuestra2", 30);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,1,"ZonaOeste","archivoMuestra66", 7);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,3,"GBA","archivoMuestra100", 99);
 
 
     do
@@ -42,7 +48,8 @@ void afichesViaPublica_menu(void)
         printf("\n5. Editar venta");
         printf("\n6. Cobrar venta");
         printf("\n7. Imprimir clientes");
-        printf("\n8. Salir");
+        printf("\n8. Menu informes");
+        printf("\n9. Salir");
         myLibrary_getInt(&opcion, 10, "\nOpcion: ", "\nIngrese solo un numero!", 1);
 
             switch(opcion)
@@ -80,9 +87,33 @@ void afichesViaPublica_menu(void)
                     cliente_printClientes(arrayClientes, CLIENTES);
                     afiches_printAfiche(arrayAfiches, VENTAS);
                     afiches_printCobradosAfiches(arrayAfiches, VENTAS);
+                    afiches_printClientesACobrar(arrayClientes, arrayAfiches, VENTAS);
+                    break;
+                case 8:
+                    switch(informes_menuInformes())
+                    {
+                        case 1:
+                            informes_clientesNameAndCuit(arrayClientes, CLIENTES);
+                            cliente_printClientes(arrayClientes, CLIENTES);
+                            break;
+                        case 2:
+                            informes_less10Afiches(arrayAfiches, VENTAS);
+                            break;
+                        case 3:
+                            informes_more10Afiches(arrayAfiches, VENTAS);
+                            break;
+                        case 4:
+                            menos10 = informes_less10AfichesWithClient(arrayAfiches, arrayClientes, VENTAS);
+                            printf("MENOS 10: %d", menos10);
+                            informes_prueba(arrayClientes, CLIENTES, menos10);
+                            break;
+                        default:
+                            break;
+                    }
+
                     break;
                 default:
-                    opcion = 8;
+                    opcion = 9;
             }
-        }while(opcion != 8);
+        }while(opcion != 9);
 }

@@ -24,10 +24,11 @@ int afiches_altaAfiche(Afiche* list, int indice, int id);
 int afiches_removeAfiche(Afiche* list, int limite, int idCliente);
 int afiches_cashAfiche(Afiche* list, int indice);
 int afiches_modifyAfiche(Afiche* list, int indice);
-int afiches_pauseAfiche(Afiche* list, Cliente* listCliente, int limite, int idAfiche);
 int afiches_printAfiche(Afiche* list, int len);
 int afiches_printCobradosAfiches(Afiche* list, int len);
 int afiches_printAficheConClientes(Afiche* list, int limite, int idCliente);
+int afiches_printClientesACobrar(Cliente* listCliente, Afiche* listAfiche, int len);
+int afiches_cantidadAfichesACobrar(Afiche* list, int limite, int idCliente);
 int afiches_altaForzada(Afiche* listAfiches,int limite, Cliente* listClientes, int lenClientes, int idCliente, char* zona, char* archivo, int cantidad);
 
 #endif // AFICHES_H_INCLUDED

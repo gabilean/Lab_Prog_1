@@ -1,0 +1,158 @@
+# depslib dependency file v1.0
+1538699449 source:/home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/afiches.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1538699314 source:/home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"myLibrary.h"
+
+1538695404 /home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/cliente.h
+
+1538689265 /home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/myLibrary.h
+
+1538689265 source:/home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1538696471 source:/home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/main.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"afichesViaPublica.h"
+
+1538697765 /home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/afiches.h
+	"cliente.h"
+
+1538698464 source:/home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/afichesViaPublica.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+
+1538690006 /home/alumno/Descargas/Lab_Prog_1/Parcial1 04.10/afichesViaPublica.h
+
+1538949119 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/afiches.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1538870788 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/myLibrary.h
+
+1538943906 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/afiches.h
+	"cliente.h"
+
+1538943270 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/cliente.h
+
+1538949415 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/afichesViaPublica.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+
+1538943270 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+
+1538870788 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/main.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"afichesViaPublica.h"
+
+1538942854 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/afichesViaPublica.h
+
+1538870788 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfiches/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1538961069 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afiches.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1538870788 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/myLibrary.h
+
+1538943906 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afiches.h
+	"cliente.h"
+
+1538943270 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/cliente.h
+
+1538943270 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+
+1538870788 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/main.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"afichesViaPublica.h"
+
+1538942854 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afichesViaPublica.h
+
+1538870788 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+
+1538962326 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afichesViaPublica.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"informes.h"
+
+1538962305 source:/home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/informes.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1538960941 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/informes.h
+
