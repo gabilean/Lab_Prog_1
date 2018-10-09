@@ -195,7 +195,7 @@ int afiches_altaAfiche(Afiche* list, int indice, int id)
     }
     else
     {
-        printf("\nNo queda más espacio para guardar clientes!!");
+        printf("\nNo queda más espacio para guardar afiches!!");
     }
     return retorno;
 }

@@ -156,3 +156,63 @@
 
 1538960941 /home/gabilean/UTN2/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/informes.h
 
+1539008779 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afiches.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1539008779 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/myLibrary.h
+
+1539008779 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afiches.h
+	"cliente.h"
+
+1539021856 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/cliente.h
+
+1539050187 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afichesViaPublica.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"informes.h"
+
+1539047422 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/informes.h
+
+1539044113 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/cliente.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+
+1539051210 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/informes.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"myLibrary.h"
+	"afiches.h"
+	"cliente.h"
+
+1539008779 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/main.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"cliente.h"
+	"afiches.h"
+	"myLibrary.h"
+	"afichesViaPublica.h"
+
+1539008779 /home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/afichesViaPublica.h
+
+1539008779 source:/home/gabilean/UTN/lab_prog_1/Lab_Prog_1/Parcial1 04.10/ventaAfichesConInforme/myLibrary.c
+	<stdio_ext.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	"myLibrary.h"
+

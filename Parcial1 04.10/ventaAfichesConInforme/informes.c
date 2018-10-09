@@ -100,24 +100,44 @@ int informes_more10Afiches(Afiche* list, int limite)
 /*Todas las ventas cuya cantidad de afiches es menor o igual a 10,
 indicando nombre del cliente, cuit, cantidad de afiches y zona del afiche*/
 
-int informes_less10AfichesWithClient(Afiche* listAfiche, Cliente* listCliente, int limite)
+Afiche* informes_arrayLess10Afiches(Afiche* listAfiche, int limite)
 {
     int i;
-    int retorno;
+    int j = 0;
+
+    Afiche* auxAfiches = NULL;
+    auxAfiches = malloc(2 * sizeof(Afiche));
+
 
     for(i=0; i<limite; i++)
     {
         if(listAfiche[i].cantidad <= 10)
         {
-            retorno = listAfiche[i].idCliente;
-            break;
+            auxAfiches[j] = listAfiche[i];
+            j++;
         }
     }
-
-    return retorno;
+    return auxAfiches;
 }
 
-int informes_prueba(Cliente* listCliente, int limite, int IdClientemenos10)
+int informes_clientsWithLess10Afiches(Afiche* listAfiche, Cliente* listCliente, int limite)
 {
-    printf("\nName: %s", listCliente[IdClientemenos10].name);
+    int i;
+
+    for(i=0; i<limite; i++)
+    {
+        if(listAfiche[i].isEmpty == COBRADO || listAfiche[i].isEmpty == COBRAR)
+        {
+            printf("IDCliente: %d - Nombre cliente: %s - Cuit: %s - Cantidad: %d - Zona: %s\n", listAfiche[i].idCliente,listCliente[listAfiche[i].idCliente].name, listCliente[listAfiche[i].idCliente].cuit, listAfiche[i].cantidad, listAfiche[i].zona);
+        }
+
+    }
+    return 0;
 }
+
+/*Listado de clientes en el cual se indique la cantidad de ventas que ha realizado
+    y cuantos afiches por venta. Ordenado por los siguientes criterios:
+        o Cantidad afiches (descendentemente)
+        o Cuit (ascendentemente)*/
+
+

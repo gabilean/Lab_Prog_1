@@ -6,7 +6,7 @@
 #include "myLibrary.h"
 #include "informes.h"
 #define CLIENTES 4
-#define VENTAS 4
+#define VENTAS 5
 
 /** \brief  Muestra menú ABM de clientes y ventas
  * \param void
@@ -21,11 +21,9 @@ void afichesViaPublica_menu(void)
     Afiche arrayAfiches[VENTAS];
     afiches_initAfiches(arrayAfiches, VENTAS);
 
-
     int opcion = 0;
     int idCliente;
     int idVenta;
-    int menos10;
 
     cliente_altaForzada(arrayClientes, CLIENTES, "Gabriel", "Mendoza", "24");
     cliente_altaForzada(arrayClientes, CLIENTES, "Cristian", "Mendoza", "24");
@@ -33,9 +31,9 @@ void afichesViaPublica_menu(void)
     cliente_altaForzada(arrayClientes, CLIENTES, "Maria", "Schell", "2");
 
     afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"CABA","archivoMuestra1", 2);
-    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"ZonaSur","archivoMuestra2", 30);
-    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,1,"ZonaOeste","archivoMuestra66", 7);
-    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,3,"GBA","archivoMuestra100", 99);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,0,"ZonaSur","archivoMuestra2", 3);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,1,"ZonaOeste","archivoMuestra66", 77);
+    afiches_altaForzada(arrayAfiches,VENTAS,arrayClientes, CLIENTES,3,"GBA","archivoMuestra100", 5);
 
 
     do
@@ -103,9 +101,7 @@ void afichesViaPublica_menu(void)
                             informes_more10Afiches(arrayAfiches, VENTAS);
                             break;
                         case 4:
-                            menos10 = informes_less10AfichesWithClient(arrayAfiches, arrayClientes, VENTAS);
-                            printf("MENOS 10: %d", menos10);
-                            informes_prueba(arrayClientes, CLIENTES, menos10);
+                            informes_clientsWithLess10Afiches(informes_arrayLess10Afiches(arrayAfiches, VENTAS), arrayClientes, VENTAS);
                             break;
                         default:
                             break;
