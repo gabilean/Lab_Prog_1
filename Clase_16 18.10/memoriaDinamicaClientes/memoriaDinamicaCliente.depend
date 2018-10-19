@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1539910021 source:/home/alumno/Escritorio/Lab_Prog_1/Clase_16 18.10/memoriaDinamicaClientes/cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1539910772 /home/alumno/Escritorio/Lab_Prog_1/Clase_16 18.10/memoriaDinamicaClientes/cliente.h
+
+1539909610 source:/home/alumno/Escritorio/Lab_Prog_1/Clase_16 18.10/memoriaDinamicaClientes/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
