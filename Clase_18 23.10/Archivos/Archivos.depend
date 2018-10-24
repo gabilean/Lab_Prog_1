@@ -1,5 +1,14 @@
 # depslib dependency file v1.0
-1540335864 source:/home/alumno/Escritorio/Lab_Prog_1/Clase_18 23.10/Archivos/main.c
+1540341325 source:/home/alumno/Escritorio/Lab_Prog_1/Clase_18 23.10/Archivos/main.c
 	<stdio.h>
 	<stdlib.h>
+	"Persona.h"
+
+1540341030 /home/alumno/Escritorio/Lab_Prog_1/Clase_18 23.10/Archivos/Persona.h
+
+1540342043 source:/home/alumno/Escritorio/Lab_Prog_1/Clase_18 23.10/Archivos/Persona.c
+	"Persona.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 
