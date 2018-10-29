@@ -86,3 +86,39 @@
 	<stdlib.h>
 	<string.h>
 
+1540765875 source:/home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1540744365 /home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/LinkedList.h
+
+1540765861 /home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/Employee.h
+	"LinkedList.h"
+
+1540769726 source:/home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/Employee.c
+	"Employee.h"
+	"LinkedList.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1540765974 source:/home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1540744365 /home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/Controller.h
+
+1540744365 source:/home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1540754356 /home/gabilean/UTN2/Lab_Prog_1/Clase_19 25.10/CASCARA_TP3/TP3/Linux_64/parser.h
+

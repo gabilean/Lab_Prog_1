@@ -40,6 +40,12 @@ Employee* Employee_newConParametros(char* id, char* nombre, char* horasTrabajada
     return NULL;
 }
 
+int Employee_getNextIdFromLL(void)
+{
+    int static id = 1001;
+    return id++;
+}
+
 int Employee_setId(Employee* this,int id)
 {
     int retorno=-1;
@@ -141,7 +147,6 @@ int Employee_addEmployeeToLL(LinkedList* pArrayListEmployee)
 {
     Employee* pEmpleado;
     int retorno = -1;
-
     char bufferInt[1024];
     char bufferNombre[1024];
     char bufferHorasTrabajadas[1024];
@@ -149,7 +154,8 @@ int Employee_addEmployeeToLL(LinkedList* pArrayListEmployee)
 
     //Aca debería validar con los buffers!
 
-    //bufferInt = Employee_getNextId();
+    sprintf(bufferInt, "%d", Employee_getNextIdFromLL());
+    printf("ID: %s", bufferInt);
     printf("\nNombre: ");
     scanf("%s", bufferNombre);
     printf("\nHoras trabajadas: ");
@@ -165,6 +171,62 @@ int Employee_addEmployeeToLL(LinkedList* pArrayListEmployee)
     {
         ll_add(pArrayListEmployee, pEmpleado);
         retorno = 0;
+    }
+
+    return retorno;
+}
+
+/**
+
+*/
+
+int Employee_modifyEmployee(LinkedList* pArrayListEmployee)
+{
+    Employee* pEmployee;
+
+    int option;
+    int retorno = 0;
+    int idPrueba;
+    char bufferNombre[1024];
+    char bufferHorasTrabajadas[1024];
+    char bufferSueldo[1024];
+    int idEmployee;
+
+    printf("\nIngrese ID de empleado a modificar: ");
+    scanf("%d", &idEmployee);
+    pEmployee = ll_get(pArrayListEmployee, idEmployee-1);
+
+    Employee_getId(pEmployee, &idPrueba);
+    printf("\nIDDD: %d", idPrueba);
+
+    printf("\nQue desea modificar?");
+    printf("\nNombre");
+    printf("\nHoras trabajadas");
+    printf("\nSueldo");
+    printf("\n\nOpcion: ");
+
+    scanf("%d", &option);
+
+    switch(option)
+    {
+        case 1:
+            printf("\nNombre: ");
+            scanf("%s", bufferNombre);
+            Employee_setNombre(pEmployee, bufferNombre);
+            ll_set(pArrayListEmployee, idEmployee, pEmployee);
+            break;
+        case 2:
+            printf("\nHoras trabajadas: ");
+            scanf("%s", bufferHorasTrabajadas);
+            Employee_setNombre(pEmployee, bufferHorasTrabajadas);
+            break;
+        case 3:
+            printf("\nSueldo: ");
+            scanf("%s", bufferSueldo);
+            Employee_setNombre(pEmployee, bufferSueldo);
+            break;
+        default:
+            printf("\nIngreso una opcion invalida");
     }
 
     return retorno;

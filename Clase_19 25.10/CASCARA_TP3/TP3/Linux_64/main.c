@@ -41,10 +41,13 @@ int main()
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
             case 3:
-                //controller_addEmployee()
+                controller_addEmployee(listaEmpleados);
+                break;
+            case 4:
+                controller_editEmployee(listaEmpleados);
                 break;
             case 6:
-                ll_sort(listaEmpleados, Employee_criterioSortNombre,0);
+                //ll_sort(listaEmpleados, Employee_criterioSortNombre,0);
                 controller_showEmployees(listaEmpleados,ll_len(listaEmpleados));
                 break;
                 //controller_
