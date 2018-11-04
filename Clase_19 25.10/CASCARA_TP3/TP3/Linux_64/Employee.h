@@ -26,7 +26,9 @@ int Employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int Employee_setSueldo(Employee* this,int sueldo);
 int Employee_getSueldo(Employee* this,int* sueldo);
 
+int Employee_menuEmployee(void);
 int Employee_addEmployeeToLL(LinkedList* pArrayListEmployee);
 int Employee_modifyEmployee(LinkedList* pArrayListEmployee);
+int Employee_removeEmployee(LinkedList* pArrayListEmployee);
 int Employee_showEmployees(LinkedList* pArrayListEmployee, int sizeList);
 int Employee_criterioSortNombre(void* thisA, void* thisB);

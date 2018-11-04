@@ -87,6 +87,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
+    Employee_removeEmployee(pArrayListEmployee);
     return 1;
 }
 

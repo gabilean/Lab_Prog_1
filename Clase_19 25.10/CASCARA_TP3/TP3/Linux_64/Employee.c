@@ -27,7 +27,7 @@ Employee* Employee_newConParametros(char* id, char* nombre, char* horasTrabajada
     //validaciones con isValid (Una por cada tipo de dato)(Lo unico que hace es llamar a funciones que ya tengo hechas y devuelve si los datos ingresados son correctos)
     idInt = atoi(id);
     sueldoInt = atoi(sueldo);
-    horasTrabajadasInt = atoi(sueldo);
+    horasTrabajadasInt = atoi(horasTrabajadas);
 
     if(
     !Employee_setId(this,idInt)&&
@@ -143,6 +143,26 @@ int Employee_getSueldo(Employee* this,int* sueldo)
     return retorno;
 }
 
+int Employee_menuEmployee(void)
+{
+    int opcion;
+
+    printf("\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)");
+    printf("\n2. Cargar los datos de los empleados desde el archivo data.csv (modo binario)");
+    printf("\n3. Alta de empleado");
+    printf("\n4. Modificar datos de empleado");
+    printf("\n5. Baja de empleado");
+    printf("\n6. Listar empleados");
+    printf("\n7. Ordenar empleados");
+    printf("\n8. Guardar los datos de los empleados en el archivo data.csv (modo texto)");
+    printf("\n9. Guardar los datos de los empleados en el archivo data.csv (modo binario)");
+    printf("\n10. Salir");
+    printf("\n\nOpcion: ");
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+
 int Employee_addEmployeeToLL(LinkedList* pArrayListEmployee)
 {
     Employee* pEmpleado;
@@ -186,7 +206,6 @@ int Employee_modifyEmployee(LinkedList* pArrayListEmployee)
 
     int option;
     int retorno = 0;
-    int idPrueba;
     char bufferNombre[1024];
     char bufferHorasTrabajadas[1024];
     char bufferSueldo[1024];
@@ -196,13 +215,13 @@ int Employee_modifyEmployee(LinkedList* pArrayListEmployee)
     scanf("%d", &idEmployee);
     pEmployee = ll_get(pArrayListEmployee, idEmployee-1);
 
-    Employee_getId(pEmployee, &idPrueba);
-    printf("\nIDDD: %d", idPrueba);
+    printf("\nDatos del emplpeado seleccionado:");
+    printf("\nNombre: %s - Horas Trabajadas: %d - Sueldo: %d", pEmployee->nombre, pEmployee->horasTrabajadas, pEmployee->sueldo);
 
     printf("\nQue desea modificar?");
-    printf("\nNombre");
-    printf("\nHoras trabajadas");
-    printf("\nSueldo");
+    printf("\n1. Nombre");
+    printf("\n2. Horas trabajadas");
+    printf("\n3. Sueldo");
     printf("\n\nOpcion: ");
 
     scanf("%d", &option);
@@ -213,20 +232,45 @@ int Employee_modifyEmployee(LinkedList* pArrayListEmployee)
             printf("\nNombre: ");
             scanf("%s", bufferNombre);
             Employee_setNombre(pEmployee, bufferNombre);
-            ll_set(pArrayListEmployee, idEmployee, pEmployee);
+            //ll_set(pArrayListEmployee, idEmployee, pEmployee);
             break;
         case 2:
             printf("\nHoras trabajadas: ");
             scanf("%s", bufferHorasTrabajadas);
-            Employee_setNombre(pEmployee, bufferHorasTrabajadas);
+            Employee_setHorasTrabajadas(pEmployee, atoi(bufferHorasTrabajadas));
             break;
         case 3:
             printf("\nSueldo: ");
             scanf("%s", bufferSueldo);
-            Employee_setNombre(pEmployee, bufferSueldo);
+            Employee_setSueldo(pEmployee, atoi(bufferSueldo));
             break;
         default:
             printf("\nIngreso una opcion invalida");
+    }
+
+    return retorno;
+}
+
+/**
+
+*/
+
+int Employee_removeEmployee(LinkedList* pArrayListEmployee)
+{
+    Employee* pEmployee = NULL;
+    int idEmployee;
+    int retorno = -1;
+
+    if(pArrayListEmployee != NULL)
+    {
+        printf("\nSeleccione el ID de un empleado a eliminar: ");
+        scanf("%d", &idEmployee);
+
+        pEmployee = ll_get(pArrayListEmployee, idEmployee-1);
+        ll_remove(pArrayListEmployee, idEmployee-1);
+        printf("El empleado: %s ha sido eliminado", pEmployee->nombre);
+
+        retorno = 0;
     }
 
     return retorno;

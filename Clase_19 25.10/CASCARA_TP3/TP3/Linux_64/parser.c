@@ -57,7 +57,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
-    Employee* pEmpleado;
+    Employee* pEmpleado = NULL;
     char bufferInt[1024];
     char bufferNombre[1024];
     char bufferHorasTrabajadas[1024];
