@@ -502,13 +502,46 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
     aux = aux -> nestNode*/
 
+    for(i = 0; i < ll_len(this); i++)
+    {
+        element = ll_get(this, i);
+        /*
+        void ll_starIter(lista)
+        ll_getNext()
+
+        ll_start()
+        int i;
+        do
+        {
+            element = getNext()
+            i++
+        }while(element != NULL)
+        */
+    }
+
     return returnAux;
 
 }
 
+int Employee_criterioSortNombre(void* thisA, void* thisB)
+{
+    int retorno = 0;
+
+    if(strcmp(thisA, thisB) > 0)
+    {
+        retorno = 1;
+    }
+    else if(strcmp(thisA, thisB) < 0)
+    {
+        retorno = -1;
+    }
+
+    return retorno;
+}
+
 /**
  * \brief llama a la funcion pasada por argumento, y le pasa cada uno de los elementos de ll original, con las coincidencias
- *  armar una nueva lista
+ *  armar una nueva lista, 1 si coincide o 0 si no coincide
  * \param LinkedList* this
  * \param pFunc Puntero a la funcion criterio
 */
@@ -517,3 +550,10 @@ LinkedList* ll_filter(LinkedList* this, int(*pFunc)(void*e1))
 {
 
 }
+
+
+/**
+*
+*
+*/
+
