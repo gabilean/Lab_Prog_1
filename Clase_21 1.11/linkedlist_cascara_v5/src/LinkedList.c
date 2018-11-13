@@ -496,31 +496,75 @@ LinkedList* ll_clone(LinkedList* this)
  */
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 {
-    int returnAux =-1;
+    int retorno = -1;
+    int i;
+    int flagSwap;
+    Node* auxNode;
+    Node* auxNode2;
 
-    /*node* aux = ll -> firstnode
+    if(this != NULL && pFunc != NULL && ll_len(this) > 0)
+    {
+            do
+            {
+                flagSwap = 0;
+                for(i=0;i<ll_len(this)-1;i++)
+                {
+                    auxNode = getNode(this, i);
+                    auxNode2 = getNode(this, i-1);
+                    element1 = ll_get(this,i);
+                    element2 = ll_get(this, i-1);
 
-    aux = aux -> nestNode*/
+                    if(array[i].precio > array[i+1].precio)
+                    {
+                        auxiliarEstructura = array[i];
+                        array[i] = array[i+1];
+                        array[i+1] = auxiliarEstructura;
+                        flagSwap = 1;
+                    }
+
+                    if(array[i].precio == array[i+1].precio && strcmp(array[i].nombre,array[i+1].nombre) > 0)
+                    {
+                        auxiliarEstructura = array[i];
+                        array[i] = array[i+1];
+                        array[i+1] = auxiliarEstructura;
+                        flagSwap = 1;
+                    }
+                }
+            }
+        }while(flagSwap);
+    }
+
+    return retorno;
+
+    /*int returnAux =-1;
+
+    node* aux = ll -> firstnode
+
+    aux = aux -> nestNode
 
     for(i = 0; i < ll_len(this); i++)
     {
         element = ll_get(this, i);
-        /*
-        void ll_starIter(lista)
+
+        void* ll_starIter(lista)
+
+        auxNode = this->pFirstNode;
+
         ll_getNext()
 
         ll_start()
+
+
         int i;
         do
         {
             element = getNext()
             i++
         }while(element != NULL)
-        */
+
     }
 
-    return returnAux;
-
+    return returnAux;*/
 }
 
 int Employee_criterioSortNombre(void* thisA, void* thisB)
@@ -552,8 +596,16 @@ LinkedList* ll_filter(LinkedList* this, int(*pFunc)(void*e1))
 }
 
 
+//map, de los elementos de la lista, devuelve recorre la lista, con el iterator,
+//y cada elemento de la lista lo pasa como parametro, recibe array y funcion,
+//recorre el array, y cada elemento lo pasa como un elemento de la funcion
+
 /**
 *
 *
 */
 
+int ll_map(LinkedList* this, (*pFunc)(void* element))
+{
+
+}
